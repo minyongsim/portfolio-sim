@@ -1,0 +1,45 @@
+@media only screen and (max-width:900px) {
+    #header .nav .depth1>li>a {
+        font-size: 20px;
+        color: gold;
+        padding: 0px 15px;
+    }
+}
+
+    @media only screen and (max-width:800px) {
+        #header {position: relative;height: 100px;}
+    
+        #header h1 {padding-top: 25px; text-align: center;}
+        #header h1 {font-size: 20px;}
+        #header .open-gnb { display: block;
+            position: absolute;
+            top: 50%;transform: translateY(-50%);
+            right: 15px;width: 25px;
+            height: 17px; z-index: 9999;}
+
+        #header .open-gnb span {
+            display: block;
+            width: 25px;height: 3px;
+            background: gold;
+            margin-bottom: 4px;
+            border-radius: 10px;
+            transition:all 0.5s ;
+        }
+        #header.on .open-gnb span:nth-last-of-type(2) {display: none;}
+        #header.on .open-gnb span:nth-last-of-type(1) { transform:rotate(45deg) ;
+        position: absolute; top: 10px;left: 0;} 
+        #header.on .open-gnb span:nth-last-of-type(3) {transform: rotate(-45deg);
+            position: absolute; top: 10px;left: 0;}
+
+       #header .nav {opacity: 0; background:rgba(0, 0, 0, 0.8); 
+        width: 320px; height: 100%; text-align: center;
+        position: fixed; top: 0%; right:-320px ; transform: translateY(0%); transition: right 0.5s;}
+       #header.on .nav {opacity: 1; right: 0;} 
+       #header .nav .depth1 > li {display: block;  padding: 20px 0; }
+       #header .nav .depth1 > li > a {display: block; font-size: 20px; 
+        color:gold; padding: 10px 10px; position: relative; top: 6px; }
+       #header .nav .depth1 > li > a:after {content: ''; display: block; width: 50px; height: 3px; 
+        background: gold; position: absolute ;top:85%;left: 50%; transform: translateX(-50%);}
+
+
+    }
