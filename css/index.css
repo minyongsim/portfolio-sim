@@ -32,22 +32,39 @@ background: rgba(0, 0, 0, 0.5); z-index: 999;}
 .outlayer.on {display: block;}
 
 
-/* 섹션 슬라이드 구역*/
-.section-outer{height: 100%;}
-.section-outer .section {height: 100%;}
-.section-outer .section:nth-child(1) .slide-outer {height:100%;}
-.section-outer .section:nth-child(1) .slide-inner {height: 100%; overflow: hidden;}
-.section-outer .section:nth-child(1) .slide {height: 100%;
-    background-size:cover ; background-repeat:no-repeat ; background-position:center ;}
-.section-outer .section:nth-child(1) .slide:nth-child(1) {
+/* 섹션 메인 슬라이드 구역*/
+
+.section-outer .section:nth-child(1) .slide {height: 600px;
+    background-size:cover ; background-repeat:no-repeat ; background-position:top ;}
+.section-outer .section:nth-child(1) .slide1 {
     background-image:url(../img/architecture-1850129_1920.jpg)
 }
-.section-outer .section:nth-child(1) .slide:nth-child(2) {
-    background-image:url(../img/new-york-2699520_1920.jpg) ;
+.section-outer .section:nth-child(1) .slide2 {
+    background-image:url(../img/arian-darvishi-wh-RPfR_3_M-unsplash.jpg) ;
 }
-.section-outer .section:nth-child(1) .slide:nth-child(3) {
-    background-image:url(../img/skyline-936589_1920.jpg);
+.section-outer .section:nth-child(1) .slide3 {
+    background-image:url(../img/martin-katler-mJLIzYB8brw-unsplash.jpg);
 }
+/* 화살표 슬라이드*/
+.slide-outer {position: relative;}
+.slide-outer .marrow {font-size: 50px; color: #fff;
+position: absolute; top: 50%; transform: translateY(-50%); background: none; opacity: 0.5;}
+.slide-outer .prevArrow {left: 10%; z-index: 9999999;}
+.slide-outer .nextArrow {right: 10%;}
+
+/* 동그라미 박스*/
+.slide-outer .slick-dots{
+    position: absolute;bottom: 20px;width: 100%; text-align: center;
+}
+.slide-outer .slick-dots li {display: inline-block;}
+.slide-outer .slick-dots li button {width: 15px; height: 15px; border-radius: 50%;
+background: #fff; text-indent: -99999px; overflow: hidden; margin: 0 5px;}
+.slide-outer .slick-dots li.slick-active button {background: gold; width: 40px;
+     border-radius: 50px; }
+/* 동그라리 자동 재생 버튼*/
+.slide-outer .plpa {font-size: 15px; color: #fff;background: none; 
+        position: absolute; bottom: 20px; left: 50%; margin-left:55px ; } 
+        
 
 .section-outer .section:nth-child(2) {background: gray;}
 .section-outer .section:nth-child(3) {background: greenyellow;}

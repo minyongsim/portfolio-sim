@@ -31,9 +31,9 @@
         #header.on .open-gnb span:nth-last-of-type(3) {transform: rotate(-45deg);
             position: absolute; top: 10px;left: 0;}
 
-       #header .nav {opacity: 0;  width: 320px; height: 100%; text-align: center; background: rgba(0, 0, 0, 0.5);
-        position: fixed; top: 0%; right:-320px ; transform: translateY(0%); transition: right 0.5s;}
-       #header.on .nav {opacity: 1; right: 0; z-index: 9999;} 
+       #header .nav {display: none;  width: 320px; height: 100%; text-align: center; background: rgba(0, 0, 0, 0.7);
+        position: fixed; top: 0%; right:-320px ; transform: translateY(0%);}
+       #header.on .nav {display: block; z-index: 9999;} 
        #header.on .nav > h1 {display:block;font-size: 20px; color: gold;
         font-family: 'Major Mono Display', monospace; position: relative;top: 5px;}
        #header .nav .depth1 > li {display: block;  padding: 20px 0; }
