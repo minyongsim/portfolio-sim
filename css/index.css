@@ -1,26 +1,58 @@
 @charset "utf-8";
 @import url('reset.css');
 
+body, html, #wrap {height:100%;}
+
 .row {max-width: 1200px; margin: 0 auto; padding: 0 10px;}
-body, html {height:100%;}
+
 
 /*헤더구역*/
 .header-outer{ background: rgba(0, 0, 0, 1);}
 #header {position: relative; height: 112px;}
-#header h1 { font-size: 30px; color: gold;
+#header > h1 { font-size: 30px; color: gold;
     font-family: 'Major Mono Display', monospace;
     letter-spacing:5px; 
     padding-top: 20px;}
-#header h1 span {display: block; padding: 0 40px; }
+#header > h1 span {display: block; padding: 0 40px; }
 #header .open-gnb{display: none;}
 #header .nav {position: absolute; right: 0;top: 50%; transform: translateY(-50%);}
+#header .nav > h1 {display: none;}
 #header .nav .depth1 > li {display: inline-block; }
 #header .nav .depth1 > li > a {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: 2px;
     font-size: 20px; color:gold; 
     padding: 0px 40px;}
-/* 섹션구역*/
+
+
+/*아웃레이어*/
+.outlayer {display: none; position: fixed; top: 0;right: 0;left: 0;bottom: 0; 
+background: rgba(0, 0, 0, 0.5); z-index: 999;}
+
+.outlayer.on {display: block;}
+
+
+/* 섹션 슬라이드 구역*/
+.section-outer{height: 100%;}
+.section-outer .section {height: 100%;}
+.section-outer .section:nth-child(1) .slide-outer {height:100%;}
+.section-outer .section:nth-child(1) .slide-inner {height: 100%; overflow: hidden;}
+.section-outer .section:nth-child(1) .slide {height: 100%;
+    background-size:cover ; background-repeat:no-repeat ; background-position:center ;}
+.section-outer .section:nth-child(1) .slide:nth-child(1) {
+    background-image:url(../img/architecture-1850129_1920.jpg)
+}
+.section-outer .section:nth-child(1) .slide:nth-child(2) {
+    background-image:url(../img/new-york-2699520_1920.jpg) ;
+}
+.section-outer .section:nth-child(1) .slide:nth-child(3) {
+    background-image:url(../img/skyline-936589_1920.jpg);
+}
+
+.section-outer .section:nth-child(2) {background: gray;}
+.section-outer .section:nth-child(3) {background: greenyellow;}
+.section-outer .section:nth-child(4) {background:tomato}
+
 
 
    
