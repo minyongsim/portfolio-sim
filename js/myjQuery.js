@@ -43,7 +43,7 @@ $(function($){
       $('.slide-inner').slick({
         autoplay:true, // 자동재생
         dots:true, //동그라미 버튼
-        autoplaySpeed:3000, // 슬라이드 재생 시간
+        autoplaySpeed:4500, // 슬라이드 재생 시간
         slidesToShow:1, //보여질 슬라이드 수(생략가능)
         slldesToScroll:1, //이동 슬라이드 수(생략가능)
         pauseOnHover:true, // 마우스오버시 멈춤여부(생략가능)
@@ -55,6 +55,13 @@ $(function($){
         arrows:true, // 좌우 화살표 사용여부
         prevArrow:'<button class="marrow prevArrow"><i class="fas fa-angle-left"></i></button> ',
         nextArrow:'<button class="marrow nextArrow"><i class="fas fa-angle-right"></i></button>',
+        responsive: [{
+            breakpoint: 801,
+            settings: {
+                arrows: false,
+                fade: true,
+            }
+        }]
 
     })
     $('.plpa').toggle( 
@@ -68,5 +75,63 @@ $(function($){
         .addClass('fa-pause')
         $('.slide-inner').slick('slickPlay')
     })
+    
+    var href, src, alt, lieq;
+  $('.gellary > li > a').on('click', function(e){
+    e.preventDefault();//기본 이벤틀 막아줌
+    lieq = $(this).parent().index()
+    $('.gellaryPopup').addClass('on')
+    href = $(this).attr('href')
+    src = $(this).find('img').attr('src')
+    alt = $(this).find('img').attr('alt')
+    //console.log(alt)
+    $('.popuplist > div > a').attr('href',href)
+    $('.popuplist > div > a > img').attr({
+        'src':src,
+        'alt':alt
+    })
+ 
+  })
 
+  $('.gellaryPopup .close, .gellaryPopup').on('click',function(){
+      $('.gellaryPopup').removeClass('on')
+  })
+  $('.popuplist').on('click',function(e){
+      e.stopPropagation(); //부모한테 이벤트 전파를 막음
+  }) 
+  function changeList(ind){
+    href = $('.gellary > li').eq(ind).find('a').attr('href')
+    src = $('.gellary > li').eq(ind).find('img').attr('src')
+    alt = $('.gellary > li').eq(ind).find('img').attr('alt')
+    $('.popuplist > div > a').attr('href',href)
+    $('.popuplist > div > a > img').attr({
+        'src':src,
+        'alt':alt
+  }).css({
+      opacity:'0.5'
+  }).stop().animate({
+      opacity:'1'
+  }, 500)
+}
+
+  $('.popuplist .prev').on('click',function(){
+    --lieq;
+    if (lieq < 0){
+        lieq = 7;
+    }
+    changeList(lieq)
+  })
+
+  $('.popuplist .next').on('click',function(){
+    ++lieq;
+    if (lieq > 7){
+        lieq = 0;
+    }
+    changeList(lieq)
+    })
+ 
+
+
+
+ 
 })(jQuery)

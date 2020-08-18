@@ -7,6 +7,11 @@
 }
 
     @media only screen and (max-width:800px) {
+        .slide-outer .slide .text p:nth-child(1) {
+            font-size:6vw; /*추후조정*/
+            max-width: 300px;
+        }
+      
         #header {position: relative;height: 100px;}
     
         #header h1 {padding-top: 25px; text-align: center;}
@@ -43,4 +48,16 @@
         background: gold; position: absolute ;top:85%;left: 50%; transform: translateX(-50%);}
 
 
+    }
+    @media only screen and (max-width:600px) {
+        .slide-outer .slide .text p:nth-child(1) {
+            font-size:6vw; /*추후 조정*/
+            max-width: 300px;
+        }
+        .slide-outer .slide .text p:nth-child(2) {
+            font-size:14px; 
+            margin-top:20px; 
+            letter-spacing:6px;
+        }
+        
     }
