@@ -15,10 +15,10 @@ html,
 
 
 /*헤더구역*/
-.header-outer {
+/* .header-outer {
     position: fixed; width: 100%; z-index: 99999999;
     background: rgba(0, 0, 0, 1);
-}
+} */
 
 #header {
     position: relative;
@@ -200,9 +200,9 @@ html,
 }
 
 /*슬라이드 섹션2*/
-/* .section-outer .section:nth-child(2) {
-   
-} */
+ /* .section-outer .section:nth-child(2) {
+   height: 500px;
+}  */
 .portfolio h2 {
     font-size: 3.75vw;
     text-align: center;
@@ -211,6 +211,7 @@ html,
 
 .portfolio ul.gellary {
     height: 100%;
+    padding-bottom:100PX ;
 }
 
 .portfolio ul.gellary li {
@@ -287,7 +288,8 @@ html,
 /*어빌리티 박스 스타일 추가*/ /*반응형으로 변환 했을 때 스타일 가로 적용 추후 예정*/
 .section-outer .section:nth-child(3){
     background: cornsilk;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 .skillcontainer h2 {
     font-size: 3vw;
@@ -298,7 +300,7 @@ html,
     text-align: center;
 }
 .skillcontainer p {
-    font-size: 0.7vw; font-weight: bold; 
+    font-size: 15px; font-weight: bold; 
 } /* 글씨 크기 추후 수정 반응형 일때 글시 크기 다시 설정  */
 .skillcontainer > div {
     height: 80%; width: 10%; display: inline-block;
@@ -313,7 +315,7 @@ html,
 }
 .skillcontainer .myscore {
     height: 0%; width: 100%; position: absolute; bottom: 0; left: 0;
-    font-size: 1vw; padding-top: 10px; opacity: 0;
+    font-size: 20px; padding-top: 10px; opacity: 0;
 }
 .skillcontainer .html .myscore {background: crimson;
 animation: htmlscore 1s both;}
@@ -365,7 +367,7 @@ animation: htmlscore 1s both;}
     100%{height: 90%; opacity: 1;}
 }
 
-.gotop {display: none ;position: fixed;right: 20px; bottom: 20px; 
-    z-index: 999999999999; opacity: 0; }
+.gotop {display: none ;position: fixed; right:10px; bottom: 10px; 
+    z-index: 999999999999; opacity: 0; text-align: center; font-size: 25px;} 
 .gotop.on {display: block;}
 .gotop i{ width: 100px; cursor: pointer;}

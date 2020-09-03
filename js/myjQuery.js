@@ -131,8 +131,10 @@ $(function($){
     })
     
     var sct=0;
+    var winHeight; 
 	$(window).scroll(function(){
-		sct=$(this).scrollTop();
+        sct=$(this).scrollTop();
+        winHeight = $(this).height()
 		if(sct>=winHeight){
             $(".header-outer").css({
                 background:'rgba(0,0,0,1)'
@@ -140,7 +142,7 @@ $(function($){
             
 		} else {
             $(".header-outer").css({
-                background:'rgba(0,0,0,0.5)'
+                background:'rgba(0,0,0,1)'
             });
         }
 
