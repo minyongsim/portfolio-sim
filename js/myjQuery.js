@@ -155,7 +155,7 @@ $(function($){
             },500)
         }
         // sct 값이 # 
-        if(sct >= $("#skills").offset().top) {
+        if(sct >= $("#Abilitys").offset().top) {
             $(".skilcontainer").stop().fadeIn(300)
         }else{
             $(".skilcontainer").hide()
