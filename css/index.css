@@ -16,6 +16,7 @@ html,
 
 /*헤더구역*/
 .header-outer {
+    position: fixed; width: 100%; z-index: 99999999;
     background: rgba(0, 0, 0, 1);
 }
 
@@ -83,7 +84,9 @@ html,
 
 
 /* 섹션 메인 슬라이드 구역*/
-.section-outer .slide {position: relative;}
+.section-outer .slide {
+    position: relative;
+}
 
 .section-outer .section:nth-child(1) .slide {
     height: 600px;
@@ -169,70 +172,200 @@ html,
 
 /* 텍스트 박스 애니메이션*/
 .slide-outer .slide .text {
-    position:absolute; width:100%;
-    text-align:center; 
-    top:50%; transform:translateY(-50%);
-    color:#fff; opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    opacity: 0;
 }
+
 .slide-outer .slide.slide.slick-active .text {
     opacity: 1;
 }
+
 .slide-outer .slide .text p:nth-child(1) {
-    font-size:3.75vw; 
-    text-shadow:2px 2px 5px #555; 
-    padding-bottom:10px; 
-   max-width:600px; margin:0 auto; 
+    font-size: 3.75vw;
+    text-shadow: 2px 2px 5px #555;
+    padding-bottom: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 .slide-outer .slide .text p:nth-child(2) {
-    font-size:20px; 
-    margin-top:20px; 
-    letter-spacing:6px;
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 6px;
 }
 
 /*슬라이드 섹션2*/
+/* .section-outer .section:nth-child(2) {
+   
+} */
 .portfolio h2 {
-    font-size:3.75vw ; 
+    font-size: 3.75vw;
     text-align: center;
-    padding: 25px 0;}
+    padding: 25px 0;
+}
 
-.portfolio ul.gellary {height: 100%;}
-    
+.portfolio ul.gellary {
+    height: 100%;
+}
+
 .portfolio ul.gellary li {
     float: left;
-    width: 33.33%;
+    width: 25%;
     height: 40%;
     overflow: hidden;
     padding: 10px;
-    margin-bottom: 1%;}
+    margin-bottom: 1%;
+}
 
 /*갤러리 팝업스타일*/
-.portfolio .gellaryPopup { opacity: 0;
-    position: fixed; top: 50%; bottom: 50%; left: 50%; right: 50%;
-    background: rgba(0,0,0,0.8); z-index: 99999999999; transition: all 0.5s;
+.portfolio .gellaryPopup {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999999999;
+    transition: all 0.5s;
     overflow: hidden;
 }
-.portfolio .gellaryPopup.on{opacity: 1; 
-    top: 0%; bottom: 0%; 
-    left: 0%; right: 0%;
-    overflow:visible;
+
+.portfolio .gellaryPopup.on {
+    opacity: 1;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    overflow: visible;
 }
 
- .gellaryPopup .popuplist {
-  position: absolute; top: 50%; 
-  /* left: 50%; width: 30%; transform: translate(-50%, -50%); */
-  left: 35%; right: 35%; transform: translateY(-50%);
-  text-align: center;
- }
- .gellaryPopup .popuplist .close {
-     position: absolute; top: -15px; right: -15px;
-     font-size: 30px; color: #fff; background: none; 
-     cursor: pointer;
- }
- .gellaryPopup .popuplist .arrow {
-     position: absolute; top: 50%; transform: translateY(-50%);
-     font-size:40px; color: #fff;
-     background: none; cursor: pointer;
-     
-  }
-  .gellaryPopup .popuplist .prev {left: -40px;}
-  .gellaryPopup .popuplist .next {right:-40px;}
+.gellaryPopup .popuplist {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; width: 30%; transform: translate(-50%, -50%); */
+    left: 35%;
+    right: 35%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.gellaryPopup .popuplist .close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+}
+
+.gellaryPopup .popuplist .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+
+}
+
+.gellaryPopup .popuplist .prev {
+    left: -40px;
+}
+
+.gellaryPopup .popuplist .next {
+    right: -40px;
+}
+
+/*어빌리티 박스 스타일 추가*/ /*반응형으로 변환 했을 때 스타일 가로 적용 추후 예정*/
+.section-outer .section:nth-child(3){
+    background: cornsilk;
+    padding: 50px 0;
+}
+.skillcontainer h2 {
+    font-size: 3vw;
+    margin: 0 auto;
+}
+
+.skillcontainer {
+    text-align: center;
+}
+.skillcontainer p {
+    font-size: 0.7vw; font-weight: bold; 
+} /* 글씨 크기 추후 수정 반응형 일때 글시 크기 다시 설정  */
+.skillcontainer > div {
+    height: 80%; width: 10%; display: inline-block;
+  
+}
+.skillcontainer .score {
+    display: inline-block;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    position: relative;
+}
+.skillcontainer .myscore {
+    height: 0%; width: 100%; position: absolute; bottom: 0; left: 0;
+    font-size: 1vw; padding-top: 10px; opacity: 0;
+}
+.skillcontainer .html .myscore {background: crimson;
+animation: htmlscore 1s both;}
+.skillcontainer .css .myscore {background: blue;
+    animation: cssscore 1s both 0.5s;}
+.skillcontainer .js .myscore{background: gold;
+    animation: jsscore 1s both 1s;}
+.skillcontainer .jq .myscore {background: blueviolet;
+    animation: jqscore 1s both 1.5s;}
+.skillcontainer .react .myscore {background: rosybrown;
+    animation: reactscore 1s both 2s;}
+.skillcontainer .photoshop .myscore {background: hotpink;
+     animation:photoshopscore 1s both 2.5s;}
+.skillcontainer .illustrator .myscore {background:yellowgreen;
+    animation:illustratorscore 1s both 3s;}
+.skillcontainer .xd .myscore {background:cornflowerblue;
+     animation:xdscore 1s both 3.5s;}
+
+@keyframes htmlscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes cssscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes jsscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes jqscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes reactscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes photoshopscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes illustratorscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+@keyframes xdscore{
+    0%{height: 0;}
+    100%{height: 90%; opacity: 1;}
+}
+
+.gotop {display: none ;position: fixed;right: 20px; bottom: 20px; 
+    z-index: 999999999999; opacity: 0; }
+.gotop.on {display: block;}
+.gotop i{ width: 100px; cursor: pointer;}
