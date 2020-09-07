@@ -15,14 +15,15 @@ html,
 
 
 /*헤더구역*/
-/* .header-outer {
-    position: fixed; width: 100%; z-index: 99999999;
+.header-outer {
+    /* position: fixed; width: 100%; z-index: 99999999; */
     background: rgba(0, 0, 0, 1);
-} */
+} *
 
 #header {
     position: relative;
     height: 112px;
+    
 }
 
 #header>h1 {
@@ -201,8 +202,8 @@ html,
 
 /*슬라이드 섹션2*/
  /* .section-outer .section:nth-child(2) {
-   height: 500px;
-}  */
+   background: #000;
+}   */
 .portfolio h2 {
     font-size: 3.75vw;
     text-align: center;
@@ -366,6 +367,15 @@ animation: htmlscore 1s both;}
     0%{height: 0;}
     100%{height: 90%; opacity: 1;}
 }
+
+
+.Contactbox {padding: 10px 0; height: 450px; text-align: center; }
+.Contactbox h1 {font-size: 50px; padding-bottom:15px ;}
+.Contactbox h2{font-size: 35px;  padding-bottom:15px;
+animation:fadeInRightBig 1s both 5s;}
+.Contactbox h3 {font-size:35px ;  padding-bottom:15px;
+    animation:fadeInRightBig 1s both 5.5s;}
+
 
 .gotop {display: none ;position: fixed; right:10px; bottom: 10px; 
     z-index: 999999999999; opacity: 0; text-align: center; font-size: 25px;} 
