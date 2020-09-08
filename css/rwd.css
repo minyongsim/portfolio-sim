@@ -47,13 +47,25 @@
        #header .nav .depth1 > li > a:after {content: ''; display: block; width: 50px; height: 3px; 
         background: gold; position: absolute ;top:85%;left: 50%; transform: translateX(-50%);}
 
+        .portfolio h2 {
+            font-size: 50px;
+            text-align: center;
+            padding: 100px 0 30px 0;
+        }
+        
+
+        .portfolio ul.gellary {
+            height: 500px;
+            padding-bottom:100PX ;
+        }
+
         .section-outer .section:nth-child(3){
             background: cornsilk;
             padding-top: 50px;
             padding-bottom: 100px;
         }
         .skillcontainer h2 {
-            font-size: 20px;
+            font-size: 50px;
             margin: 0 auto;
         }
         
