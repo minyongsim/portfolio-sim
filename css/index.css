@@ -371,13 +371,20 @@ animation: htmlscore 1s both;}
 }
 
 
-.Contactbox {padding: 10px 0; height: 800px; text-align: center; }
-.Contactbox h1 {font-size: 50px; padding-bottom:15px ;}
-.Contactbox h2{font-size: 35px;  padding-bottom:15px;
-animation:fadeInRightBig 1s both 5s;}
-.Contactbox h3 {font-size:35px ;  padding-bottom:15px;
-    animation:fadeInRightBig 1s both 5.5s;}
-
+section:nth-child(4){ height: 500px; text-align: center; font-size: 20px; font-weight: bold; 
+    border: 6px solid #555;}
+section:nth-child(4) h2 {font-size: 50px; padding: 10px 0;  }
+section:nth-child(4) ul li {padding: 15px 0;}
+.typing-txt{display: none; }
+.typing ul li.on { 
+      display: inline-block; 
+      animation: cursor 1s both;
+    } 
+@keyframes cursor{ 
+      0%{border-right: 1px solid #fff} 
+      50%{border-right: 1px solid #000} 
+      100%{border-right: 1px solid #fff} 
+    }
 
 .gotop {display: none ;position: fixed; right:10px; bottom: 10px; 
     z-index: 999999999999; opacity: 0; text-align: center; font-size: 25px;} 
