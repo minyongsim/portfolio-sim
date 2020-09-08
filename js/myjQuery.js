@@ -175,7 +175,7 @@ $(function($){
         $(this).parent().siblings().removeClass('on')
         var index = $(this).parent().index()
         $('body, html').stop().animate({
-            scrollTop:index*winHeight
+            scrollTop:index*$(window).height()
         }, 800)
         //return false
  
