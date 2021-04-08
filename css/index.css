@@ -57,6 +57,7 @@ html,
 #header .nav .depth1>li {
     display: inline-block;
 }
+#header .nav .depth1>li.on{background: #555;}
 
 #header .nav .depth1>li>a {
     font-family: 'Abril Fatface', cursive;
