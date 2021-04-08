@@ -16,7 +16,7 @@ $(function($){
                 })
             })
         }
-        // $('.outlayer').toggleClass('on')
+        $('.outlayer').toggleClass('on')
     }
 
     $('.open-gnb').on('click', openNav)
@@ -134,10 +134,10 @@ $(function($){
     var winHeight; 
 	$(window).scroll(function(){
         sct=$(this).scrollTop();
-        winHeight = $(this).height()
-		if(sct>=winHeight){
+        winHeight = $(this).height()/2
+		if(sct >= winHeight){
             $(".header-outer").css({
-                background:'rgba(0,0,0,1)'
+                background:'rgba(0,0,0,0.1)'
             });
             
 		} else {
@@ -149,20 +149,43 @@ $(function($){
         // 스크롤탑값이 100이상이 되면 맨위로 버튼이 보이고 100미만이면 숨기기
         if(sct>=100){
             $(".gotop").addClass("on").stop().animate({
-                opacity:"1"
+                opacity: 1
             },500)
         }else{
             $(".gotop").removeClass("on").stop().animate({
-                opacity:"0"
+                opacity:0
             },500)
         }
-        // sct 값이 # 
-        if(sct >= $("#Abilitys").offset().top) {
-            $(".skilcontainer").stop().fadeIn(300)
+        // sct 값이 
+        if(sct >= $("#Abilitys").offset().top){
+         skils(80, '.html');
+         skils(80, '.css');
+         skils(80, '.js');
+         skils(80, '.jq');
+         skils(80, '.react');
+         skils(80, '.photoshop');
+         skils(80, '.illustrator');
+         
         }else{
-            $(".skilcontainer").hide()
+            $('.skillcontainer .myscore').removeClass('on')
         }
+
+        function skils (jumsu, classname){
+            var i=0
+            var skill = setInterval( function(){
+                if (i < jumsu ) {
+                    i++
+                    $(classname).find('.myscore').text(i+'%').addClass('on')
+                }else{
+                    clearInterval(skill)
+                }
+            },40)
+        }
+       
+    
     });
+
+
     $(".gotop").on("click",function(){
         $("html,body").stop().animate({
             scrollTop:"0"
