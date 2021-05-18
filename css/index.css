@@ -293,6 +293,7 @@ html,
     background: cornsilk;
     padding-top: 50px;
     padding-bottom: 100px;
+    margin-top: 10px;
 }
 .skillcontainer h2 {
     font-size: 3vw;
@@ -301,6 +302,7 @@ html,
 }
 
 .skillcontainer {
+    margin-top: 10px;
     text-align: center;
 }
 .skillcontainer p {
@@ -316,35 +318,37 @@ html,
     height: 600px;
     text-align: center;
     position: relative;
+    border: 1px solid #555;
+
 }
-.skillcontainer .myscore {
+.skillcontainer .myscore{
     height: 0%; width: 100%; position: absolute; bottom: 0; left: 0;
-    font-size: 20px; padding-top: 10px; opacity: 0;
+    font-size: 20px; padding-top: 10px; opacity: 0; color: #fff;
+   
 }
-.skillcontainer .html .myscore {background: crimson;
-animation: htmlscore 1s both;}
-.skillcontainer .css .myscore {background: blue;
-    animation: cssscore 1s both 0.5s;}
-.skillcontainer .js .myscore{background: gold;
-    animation: jsscore 1s both 1s;}
-.skillcontainer .jq .myscore {background: blueviolet;
-    animation: jqscore 1s both 1.5s;}
-.skillcontainer .react .myscore {background: rosybrown;
-    animation: reactscore 1s both 2s;}
-.skillcontainer .photoshop .myscore {background: hotpink;
-     animation:photoshopscore 1s both 2.5s;}
-.skillcontainer .illustrator .myscore {background:yellowgreen;
-    animation:illustratorscore 1s both 3s;}
-.skillcontainer .xd .myscore {background:cornflowerblue;
-     animation:xdscore 1s both 3.5s;}
+.skillcontainer .html .myscore.on {background: crimson;
+    animation: htmlscore 2s both ;}
+.skillcontainer .css .myscore.on {background: blue;
+    animation: cssscore 2s both 0.3s;}
+.skillcontainer .js .myscore.on {background: gold;
+    animation: jsscore 2s both 0.6s;}
+.skillcontainer .jq .myscore.on  {background: blueviolet;
+    animation: jqscore 2s both 0.9s;}
+.skillcontainer .react .myscore.on  {background: rosybrown;
+    animation: reactscore 2s both 1.2s;}
+.skillcontainer .photoshop .myscore.on  {background: hotpink;
+     animation:photoshopscore 2s both 1.5s;}
+.skillcontainer .illustrator .myscore.on  {background:yellowgreen;
+    animation:illustratorscore 2s both 1.8s;}
+
 
 @keyframes htmlscore{
     0%{height: 0;}
-    100%{height: 90%; opacity: 1;}
+    100%{height: 80%; opacity: 1;}
 }
 @keyframes cssscore{
     0%{height: 0;}
-    100%{height: 90%; opacity: 1;}
+    100%{height: 80%; opacity: 1;}
 }
 @keyframes jsscore{
     0%{height: 0;}
@@ -371,8 +375,7 @@ animation: htmlscore 1s both;}
     100%{height: 90%; opacity: 1;}
 }
 
-
-section:nth-child(4){ height: 500px; text-align: center; font-size: 20px; font-weight: bold; 
+section:nth-child(4){ height: 700px; text-align: center; font-size: 20px; font-weight: bold; 
     border: 6px solid #555;}
 section:nth-child(4) h2 {font-size: 50px; padding: 10px 0;  }
 section:nth-child(4) ul li {padding: 15px 0;}
@@ -386,6 +389,8 @@ section:nth-child(4) ul li {padding: 15px 0;}
       50%{border-right: 1px solid #000} 
       100%{border-right: 1px solid #fff} 
     }
+
+    
 
 .gotop {display: none ;position: fixed; right:10px; bottom: 10px; 
     z-index: 999999999999; opacity: 0; text-align: center; font-size: 25px;} 
