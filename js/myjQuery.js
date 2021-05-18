@@ -204,7 +204,7 @@ $(function($){
  
     })
 
-    $(".section").on("mousewheel",function(e, wh){    
+    $("section").on("mousewheel",function(e, wh){    
         var index = $(this).index()
 		//마우스 휠을 올렸을때	
           if (wh > 0) {  
@@ -229,7 +229,8 @@ $(function($){
           }
         
      });
-     var typingBool = false; 
+
+var typingBool = false; 
 var typingIdx=0; 
 var liIndex = 0;
 var liLength = $(".typing-txt>ul>li").length;
